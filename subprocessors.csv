@@ -1,0 +1,847 @@
+Company,Sub-processor,Service category / What they do
+Cursor,AWS,"Our infrastructure is primarily hosted on AWS. Most of our servers are in the US, with some latency-critical servers located in AWS regions in (Tokyo) and Europe (London)."
+Cursor,Microsoft Azure,Some secondary infrastructure is hosted on Microsoft Azure. All of our Azure servers are in the US.
+Cursor,Google Cloud Platform (GCP),Some secondary infrastructure is hosted on Google Cloud Platform (GCP). All of our GCP servers are in the US.
+Cursor,Fireworks,"Our custom models are hosted with Fireworks, on servers in the US, Asia (Tokyo), and Europe. Fireworks may store some code data if privacy mode is disabled to speed up inference for our models. We have a zero data retention agreement with Fireworks."
+Cursor,OpenAI,We rely on many of OpenAI's models to give AI responses. Requests may be sent to OpenAI even if you have an Anthropic (or someone else's) model selected in chat (e.g. for summarization). We have a zero data retention agreement with OpenAI.
+Cursor,Anthropic,We rely on many of Anthropic's models to give AI responses. Requests may be sent to Anthropic even if you have an OpenAI (or someone else's) model selected in chat (e.g. for summarization). We have a zero data retention agreement with Anthropic.
+Cursor,Google Cloud Vertex API,We rely on some Gemini models offered over Google Cloud's Vertex API to give AI responses. Requests may be sent to Google Cloud Vertex API even if you have an OpenAI (or someone else's) model selected in chat (e.g. for summarization). We have a zero data retention agreement with Vertex.
+Cursor,xAI,We rely on some Grok models offered over the xAI API to give AI responses. We have a zero data retention agreement with xAI.
+Cursor,Turbopuffer,"Embeddings of indexed codebases, as well as metadata associated with the embeddings (obfuscated file names), are stored with Turbopuffer on Google Cloud's servers in the US. You can read more on the Turbopuffer security page. Users can disable codebase indexing; read more about it in the Codebase Indexing section of this document."
+Cursor,Exa,"Used for web search functionality. Search requests are potentially derived from code data (e.g. when using ""@web"" in the chat, a separate language model will look at your message, conversation history and current file to determine what to search for, and Exa/SerpApi will see the resulting search query)."
+Cursor,SerpApi,"Used for web search functionality. Search requests are potentially derived from code data (e.g. when using ""@web"" in the chat, a separate language model will look at your message, conversation history and current file to determine what to search for, and Exa/SerpApi will see the resulting search query)."
+Cursor,MongoDB,"We use MongoDB for some of our analytics data, for users who do not have privacy mode enabled."
+Cursor,Datadog,"We use Datadog for logging and monitoring. As discussed in the Privacy Mode Guarantee section, logs related to privacy mode users do not contain any code data."
+Cursor,Databricks,We use Databricks MosaicML for training some of our custom models. Data from privacy mode users never reaches Databricks.
+Cursor,Foundry,We use Foundry for training some of our custom models. Data from privacy mode users never reaches Foundry.
+Cursor,Voltage Park,We use Voltage Park for training some of our custom models. Data from privacy mode users never reaches Voltage Park.
+Cursor,Slack,We use Slack as our internal communication tool. We may send snippets of prompts of non-privacy users in our internal chats for debugging.
+Cursor,Google Workspace,We use Google Workspace to collaborate. We may send snippets of prompts of non-privacy users in our internal emails for debugging.
+Cursor,Sentry,"We use Sentry to monitor errors and performance in our app. Code data is never explicitly sent, but may show up in reported errors. Data from privacy mode users never reaches Sentry."
+Cursor,Mistral,We use Mistral to parse public PDFs found on the internet. No private data reaches Mistral (unless you manually use a Mistral model with your own API key).
+Cursor,Pinecone,Embeddings and metadata of some indexed docs are stored on Pinecone. These docs are fetched from the public web.
+Cursor,Amplitude,"We use Amplitude for some of our analytics data. No code data is stored with Amplitude; only event data such as ""number of Cursor Tab requests""."
+Cursor,HashiCorp,We use HashiCorp Terraform to manage our infrastructure.
+Cursor,Stripe,"We use Stripe to handle billing. Stripe will store your personal data (name, credit card, address)."
+Cursor,Vercel,We use Vercel to deploy our website. The website has no way of accessing code data.
+Cursor,WorkOS,"We use WorkOS to handle auth. WorkOS may store some personal data (name, email address)."
+Replit,Google Cloud Services,Cloud Infrastructure for our apps and services
+Replit,"Google, Inc",Site analytics (web) and customer interactions (email)
+Replit,Segment,Site analytics (web)
+Replit,Redis Labs,Database management
+Replit,Discord,Customer support
+Replit,"Civilized Discourse Construction Kit, Inc",Customer support
+Replit,Typeform,Customer support
+Replit,Common Room,Customer support
+Replit,Amplitude,Site analytics (web)
+Replit,Hex Technologies Inc,Site analytics (web)
+Replit,Datadog,Site analytics (email)
+Replit,Stytch,Analytics and identity
+Replit,Databricks,Database management
+Replit,Metabase,Database management
+Replit,Neon,Database management
+Replit,Sanity,Content management
+Replit,Stripe,Payment processing
+Replit,Twilio,SMS verification
+Replit,X (Twitter),Site analytics (web) and customer interactions (email)
+Replit,ZoomInfo,Site analytics (web) and customer interactions (email)
+Replit,AppsFlyer,Site analytics and customer interactions (mobile)
+Anthropic,Google Cloud Platform,Cloud infrastructure
+Anthropic,Amazon Web Services,Cloud Infrastructure
+Anthropic,Cloudflare,Traffic Routing (CDN)
+Anthropic,Stripe,Billing
+Anthropic,WorkOS,"Security, Single Sign-On"
+Anthropic,Retool,"User support, safety, monitoring"
+Anthropic,Intercom,User support
+Anthropic,Twilio,"Analytics, email/SMS communications"
+Anthropic,"Functional Software, dba Sentry","Error Handling, User Support"
+Anthropic,Sift,Fraud and abuse detection
+Anthropic,Brave Search,Web Search
+Anthropic,ElevenLabs,Text to speech
+CodeGPT,Amazon Web Services,Cloud Service and AI Models
+CodeGPT,Microsoft Azure,Cloud Service and AI Models
+CodeGPT,Google Cloud Platform,Cloud Service and AI Models
+CodeGPT,GitHub,Code Repository
+CodeGPT,Supabase,Database
+CodeGPT,Vercel,Engineering
+CodeGPT,Upstash,Database
+CodeGPT,Docker,Engineering
+CodeGPT,Cloudflare,Hosting
+CodeGPT,Datadog,Cloud Monitoring
+CodeGPT,Bugsnag,Monitoring
+CodeGPT,ConvertAPI,Engineering
+CodeGPT,Mistral,AI Models
+CodeGPT,Cohere,AI Models
+CodeGPT,Groq,AI Models
+CodeGPT,Deel,Payroll
+CodeGPT,Google Workspace,Identity Provider
+CodeGPT,Stripe,Payments Processor
+CodeGPT,Intercom,Customer Support
+CodeGPT,HubSpot,Sales
+CodeGPT,Mixpanel,Data Analytics
+CodeGPT,Slack,Collaboration
+CodeGPT,Discord,Collaboration
+CodeGPT,Trello,Collaboration
+CodeGPT,Notion,Collaboration
+CodeGPT,Google Drive,Document Management
+CodeGPT,Google Analytics,Data Analytics
+CodeGPT,Hotjar,Data Analytics
+CodeGPT,Miro,Collaboration
+CodeGPT,Make,Automation
+CodeGPT,Figma,Product Design
+CodeGPT,Vanta,Security and Compliance
+CodeGPT,Certn,Background Check
+CodeGPT,Quickbooks,Accounting
+CodeGPT,Brex,Finance and Payments
+CodeGPT,Calendly,Collaboration
+CodeGPT,Uber,Travel
+CodeGPT,Mavity,Outsource Service
+CodeGPT,ReadMe,Documentation
+poolside,Google,"Google Workspace, formerly G Suite, is used to process contractual data and communications with customers."
+poolside,Amazon Web Services,AWS is used to process any Product Metrics and logging.
+poolside,Gong,Gong is used to record customer calls. Calls are only recorded with the knowledge and consent of the customer.
+poolside,Salesforce,"Salesforce is used to keep track of customers’ contractual data, contracts, etc."
+poolside,ClickHouse,ClickHouse allows poolside to generate analytical reports using SQL queries in real time.
+poolside,Grafana,Grafana monitors all user and customer activity.
+windsurf,Google Cloud Platform (GCP),"Stores code data only if Cloud and relevant features are opted-in, sees code data"
+windsurf,Crusoe,Sees code data for inference
+windsurf,Oracle Cloud,Sees code data for inference
+windsurf,Palantir,Sees code data for inference
+windsurf,AWS,Sees code data for inference
+windsurf,OpenAI,Sees code data for inference
+windsurf,Anthropic,Sees code data for inference
+windsurf,Google Cloud Vertex API,Sees code data for inference
+windsurf,xAI,Sees code data for inference
+windsurf,Databricks,Sees code data for inference
+windsurf,Bing API,Sees text potentially derived from code data
+windsurf,PagerDuty,Sees no code data
+windsurf,Slack,Sees no code data
+windsurf,Google Workspace,Sees no code data
+windsurf,Firebase,Sees no code data
+windsurf,Okta,Sees no code data
+windsurf,Stripe,Sees no code data
+windsurf,Vercel,Sees no code data
+windsurf,Mintlify,Sees no code data
+windsurf,Zendesk,Sees no code data unless provided by user
+windsurf,Retool,May see code data if not on zero-data retention
+windsurf,Metabase,May see code data if not on zero-data retention
+windsurf,Tableau,May see code data if not on zero-data retention
+windsurf,Salesforce,Sees no code data
+windsurf,Hubspot,Sees no code data
+windsurf,Brevo,Sees no code data
+Vercel,Amazon Web Services (AWS),"Hosting, storage and generative AI services"
+Vercel,Cloudflare,Content delivery network (CDN) and security services
+Vercel,Google,"Cloud computing, storage and generative AI services"
+Vercel,Microsoft,Hosting and storage services
+Vercel,Datadog,Cloud monitoring and security services
+Vercel,Hound Technology,Real-time monitoring and debugging service
+Vercel,Redis,Real-time logging and security services
+Vercel,WorkOS,Audit log services
+Vercel,Algolia,Real-time site search services
+Vercel,Knock Labs,Customer notification services
+Vercel,Salesforce,Customer relationship management (CRM) and support services
+Vercel,Stripe,Payment processing services
+Vercel,Tinybird,Analytics services
+Vercel,tray.io,Customer support process automation and productivity platform
+Vercel,Twilio,Customer communication services
+Vercel,Upstash,Serverless storage services
+Vercel,Neon,Serverless storage services
+Vercel,Kasada,Fraud prevention services
+Vercel,Discourse,Community support and communication services
+Vercel,ClickHouse,Analytics services
+Vercel,OpenAI,Generative AI services
+Vercel,Fireworks AI,Generative AI services
+Vercel,Anthropic,Generative AI services
+Datadog,"Amazon Web Services, Inc.",Infrastructure services
+Datadog,"Anthropic, PBC",AI services
+Datadog,Atlassian Pty Ltd,Internal support collaboration
+Datadog,"Forethought Technologies, Inc.",Support ticket routing
+Datadog,Google LLC,Infrastructure services
+Datadog,Google LLC,Email and office applications
+Datadog,"Mailgun Technologies, Inc.",Email and office applications
+Datadog,Microsoft Corporation (Azure),Infrastructure services
+Datadog,"OpenAI, LLC",AI services
+Datadog,"Salesforce, Inc.",Customer support platform
+Datadog,"Slack Technologies, Inc.",Communication services
+Datadog,"Snowflake, Inc.",Data warehouse services
+Datadog,"Twilio, Inc.",Communication services
+Datadog,"Vonage Business, Inc.",Communication services
+Datadog,"Zendesk, Inc.",Customer support platform
+Scale,"Amazon Web Services, Inc.",Infrastructure Provider
+Scale,Atlassian Pty Ltd. (Jira),Project Management
+Scale,"CloudFlare, Inc.",Caching
+Scale,Civilized Discourse Construction Kit Inc. (“Discourse”),Messaging and Support
+Scale,"Datadog, Inc.",Monitoring and Alerts
+Scale,"Elasticsearch, Inc.",Search
+Scale,"Figma, Inc.",Custom Labeling Workflow Design
+Scale,"FiveTran, Inc.",Analytics
+Scale,"Fullstory, Inc.",Application Monitoring
+Scale,"Functional Software, Inc. (dba Sentry.io)",Monitoring and Alerts
+Scale,Google LLC (Google Cloud Platform),Infrastructure Provider
+Scale,Google LLC (Workspace),Productivity
+Scale,"Linear Orbit, Inc.",Project Management
+Scale,Microsoft Corporation (Microsoft 365),Productivity
+Scale,"MongoDB, Inc. (Atlas)",Database
+Scale,"Segment.io, Inc.",Analytics
+Scale,"Shortcut Software Company (f/k/a Clubhouse Software, Inc.)",Project Management
+Scale,"Slack Technologies, Inc.",Messaging and Support
+Scale,Snowflake Inc.,Analytics
+Scale,"Tableau Software, LLC (a Salesforce Company)",Analytics
+Scale,TeleworkPH,Annotations and Labeling
+Scale,"Zendesk, Inc.",Customer Success Tools
+Scale,Scale AI Germany GmbH,
+Scale,Scale AI Global MX S de RL de CV,
+Scale,"Smart Ecosystem, Inc.",
+Scale,"Smart Ecosystem Philippines, Inc.",
+Scale,Scale AI Hungary Kft.,
+Gong,Gong.io Ltd.,Providing the Gong service
+Gong,"Amazon Web Services, Inc.","Cloud services, language transcription, application AI functionality"
+Gong,"MongoDB, Inc.",Data storage and querying
+Gong,"Mailgun Technologies, Inc.",Transactional email
+Gong,"Twilio, Inc.",VOIP and text message notifications
+Gong,"Filestack, Inc.",File upload/view services
+Gong,Gongio Ireland Limited,A wholly-owned Gong subsidiary
+Gong,Google Cloud EMEA Limited,"Cloud services, language transcription, application AI functionality"
+Gong,Snowflake Inc.,Data storage and querying
+Gong,Microsoft Ireland Operations Limited,Azure cloud services and application AI functionality
+Sierra,"Amazon Web Services, Inc.","Data storage, cloud hosting"
+Sierra,"Cloudflare, Inc.",Content Delivery Network and Edge web serving
+Sierra,"OpenAI, L.L.C.",Large language model serving
+Sierra,Microsoft Corporation,Large language model serving
+Sierra,"Salesforce, Inc. (Slack)",Communication and collaboration; Customer Service
+Sierra,"WorkOS, Inc.",Authentication and identity management
+Sierra,Twilio Inc.,Telephony
+Sierra,"Deepgram, Inc.",Speech-to-text transcription
+Sierra,Eleven Labs Inc.,Speech-to-text transcription and text-to-speech audio generation
+Cognition AI,Anthropic,AI Provider
+Cognition AI,Amazon Web Services (AWS),Cloud Service Provider
+Cognition AI,Microsoft Azure,Cloud Service Provider
+Cognition AI,OpenAI,AI Provider
+Cognition AI,Datadog,Logging and monitoring solution
+Cognition AI,Sentry,Error monitoring and alerting tool
+Cognition AI,Stripe,Payment processing
+Cognition AI,Pylon,Help desk ticketing system
+Cognition AI,SendGrid,Email API
+Cognition AI,HubSpot,CRM
+Cognition AI,auth0 by Okta,Authentication & User Management
+Cognition AI,Hotjar,Error monitoring tool
+Cognition AI,Vercel,Cloud Service Provider
+Cognition AI,Google Cloud,Cloud Service Provider
+Cognition AI,Fireworks AI,AI Infrastructure Provider
+X,AWS,"Cloud infrastructure, services, and support"
+X,Oracle,"Cloud infrastructure, services, and support"
+X,Google Cloud,"Cloud infrastructure, services, and support"
+X,xAI Affiliates,"Cloud Infrastructure, services, and support"
+X,xAI Subsidiary,Services and support
+X,Cloudflare,Content delivery
+X,Hive,Content delivery
+X,Wiz,Services and support
+X,Chronosphere,Services and support
+X,Axiom,Services and support
+Neon,Zendesk,Customer service software
+Neon,Productboard Inc.,Product Analytics
+Neon,Stripe,Credit Card Processing
+Neon,DocuSign,Document Management
+Neon,Grafana,Infrastructure service provider
+Neon,Google Workspace,Internal and External Communications Document Management System
+Neon,Google Analytics,Analytics
+Neon,Typeform,Feedback forms
+Neon,Intuit Inc (Quickbooks),Billing
+Neon,Amazon Web Services,Infrastructure service provider
+Neon,Hubspot,"Customer relationship management, analytics & marketing"
+Neon,Notion,Internal Communications
+Neon,Orb,Billing
+Neon,Segment,Customer Data Platform and analytics
+Neon,Sentry,Infrastructure service provider
+Neon,Slack,Internal Messenger
+Neon,Snowflake,Data Analytics
+Neon,Zapier,Integration for Feedback
+Neon,Grain,Video recording
+Neon,Madkudu,Marketing
+Neon,Microsoft Azure,Infrastructure service provider
+Neon,"Peaberry Software, Inc. (trading as Customer.io)",Marketing
+Neon,"Linear Orbit, Inc.",Product Development
+Neon,Posthog,Analytics
+Neon,Render,Cloud Infrastructure provider
+Neon,Safebase,Trust Center
+Neon,Motif Land Inc.(trading as Markprompt),AI Agent for Customer Support
+Neon,Avalara,Compliance
+Neon,Clay Labs,Marketing
+Neon,Clickhouse Inc.,Infrastructure service provider
+Neon,Yess.ai,Marketing
+Neon,Shadowfax Inc.,AI Data Engineer
+Databricks,"Amazon Web Services, Inc.",Cloud Service Provider
+Databricks,Google LLC,Cloud Service Provider
+Databricks,Microsoft Corporation,Cloud Service Provider
+Databricks,Oracle Corporation,Cloud Service Provider
+Databricks,Twilio Inc.,"Provide customer communications, including in-product messaging and email."
+Databricks,Atlassian Pty Ltd.,Customer support and ticket handling.
+Databricks,Microsoft Corporation,Customer support (in Microsoft Teams).
+Databricks,"salesforce.com, inc.",Customer support ticketing.
+Databricks,"Slack Technologies, Inc.",Customer support.
+Databricks,"SupportLogic, Inc.",Monitor quality of service in responding to support tickets.
+Databricks,Databricks Federal LLC,
+Databricks,Databricks B.V.,
+Databricks,Databricks U.K. Limited,
+Databricks,Databricks Australia Pty Ltd,
+Databricks,Databricks SARL,
+Databricks,Databricks GmBH,
+Databricks,Databricks Asiapac Unified Analytics Pte. Ltd.,
+Databricks,Databricks Japan K.K.,
+Databricks,Databricks India Private Limited,
+Databricks,Databricks Canada ULC,
+Databricks,Databricks Italy S.r.l.,
+Databricks,Databricks Sweden AB,
+Databricks,Databricks Switzerland GmbH,
+Databricks,Databricks Spain S.L.,
+Databricks,Databricks Korea LLC,
+Databricks,Databricks New Zealand Limited,
+Databricks,Databricks Costa Rica SRL,
+Databricks,Databricks doo Beograd,
+Databricks,Databricks Brazil Ltda.,
+Clay,Amazon Web Services,Cloud provider
+Clay,Amplitude,Data analytics
+Clay,Anthropic,LLM provider/hosting
+Clay,Braintrust,LLM Operations
+Clay,Datadog,APM and security
+Clay,Segment,Data analytics
+Clay,Snowflake,Data analytics
+Clay,Browserbase,LLM Operations
+Clay,Cohere,LLM operations
+Clay,Cube Dev,Data analytics
+Clay,Fireworks,LLM provider/hosting
+Clay,Fivetran,Data ETL
+Clay,Google Gemini,LLM provider/hosting
+Clay,Grafana,Logging and metrics
+Clay,Intercom,Customer support
+Clay,Langsmith,LLM logging and tracing
+Clay,Mezmo,Logging and metrics
+Clay,Mistral,LLM provider/hosting
+Clay,OpenAI,LLM provider/hosting
+Clay,Parallel Web Systems,LLM operations
+Clay,Postmark,Email service provider
+Clay,Raindrop.ai,LLM operations
+Clay,Sentry,Error logging
+Clay,SerpApi,LLM operations
+Clay,Serper,LLM operations
+Clay,Slack,Customer Support
+Clay,Turbopuffer,Vector Database
+Clay,Verisoul,Fraud Detection
+Clay,WorkOS,Authentication support
+Clay,Zapier,Data imports
+Clay,Zenrows,LLM operations
+Glean,Google Inc.,Cloud Service Provider
+Glean,"Amazon Web Services, Inc.",Cloud Service Provider
+Glean,"Intercom, Inc. (optional)",Cloud-based Customer Support Services (info shared: name and email address of the user)
+Glean,"Sendgrid, Inc","Email Provider (info shared: first name, last name and email of the sender and recipient, document titles, document URLs, employee profile photo, employee join date)"
+Glean,"OpenAI, Inc (optional)","Generative AI provider (info shared: User’s query and title, metadata and snippets from documented results. Metadata includes author name, date, document type)"
+Glean,Azure (optional),"Generative AI provider (info shared: User’s query and title, metadata and snippets from document results. Metadata includes author name, date, document type)"
+Glean,Glean,Emails sent to Sendgrid go through Glean’s GCP project (not persisted). Info shared is the same as Sendgrid
+Pinecone,Confluent,Event Streaming
+Pinecone,Zendesk,Customer service and technical support
+Pinecone,Amazon Web Services (AWS),Cloud infrastructure and hosted services
+Pinecone,Microsoft Azure,Cloud Infrastructure
+Pinecone,Salesforce,Customer service and technical support
+Pinecone,Google,Cloud infrastructure and hosted services
+Pinecone,Twilio,Customer notifications
+Pinecone,Pinecone Systems Ltd.,Operating affiliate
+Pinecone,Pinecone Systems UK Ltd.,Operating affiliate
+Grafana,"Alphabet Inc., Google (GCP)","Infrastructure, Cloud Service Provider"
+Grafana,Microsoft Corporation (Azure),"Infrastructure, Cloud Service Provider"
+Grafana,Amazon.com Inc. (AWS),"Infrastructure, Cloud Service Provider"
+Grafana,Twilio Inc. (Sendgrid),"Email, Alerting for SaaS"
+Grafana,Mailgun Technologies Inc.,"SMS, Alerting for SaaS"
+Grafana,OpenAI,Optional: AI feature connectivity
+Grafana,Anthropic,Optional: AI feature
+Grafana,Palantir Technologies Inc.,For customers using Grafana’s Federal Cloud offering
+Cohere,Google Cloud,Infrastructure service provider
+Cohere,Fullstory,Software delivery platform
+Cohere,LaunchDarkly,Feature Flagging
+Cohere,New Relic,Platform Monitoring
+Cohere,Retool,Software delivery platform
+Cohere,Upollo,Fraud and Abuse Detection
+Cohere,Hotjar,Customer support
+Cohere,Sentry IO,Event and Error Handling
+Cohere,Segment,Event and Error Handling
+Cohere,Sendgrid,Email Communications
+Cohere,Stripe,Billing
+Cohere,Intercom,Customer support
+Cohere,Vercel,Web Application Hosting
+Cohere,Active Fence,Trust and Safety
+Hebbia,OpenAI,LLM
+Hebbia,Anthropic,LLM
+Hebbia,Google - Gemini,LLM
+Hebbia,Auth0,Identity provider for user accounts
+Hebbia,Amazon Web Services,Cloud provider
+Hebbia,Elastic,
+Granola,"Anthropic, PBC","AI features such as note generation, ability to chat with notes, or generate artifacts such as follow up emails."
+Granola,OpenAI,AI API
+Granola,Deepgram,Transcription
+Granola,"Retool, Inc.",Internal dashboards and tooling
+Granola,Amazon Web Services,Cloud provider
+Granola,Sentry,Cloud monitoring
+Granola,"Stripe, Inc.",Payment processor
+Granola,Vocify Inc.d/b/a Vellum,Proxy for LLM calls
+Granola,Google Workspace,Identity provider
+Granola,"AssemblyAI, Inc.",Transcription
+Granola,Posthog,"Product analytics, session replays, feature flags, A/B testing, surveys"
+Snowflake,Amazon Web Services,Cloud hosting and infrastructure provider
+Snowflake,Amazon Web Services,Simple Email Service (SES) for optional customer-configured notifications
+Snowflake,Amazon Web Services,Snowflake Data Clean Rooms Web App
+Snowflake,Amazon Web Services,Native app security scanning for customer accounts in Google Cloud Platform regions
+Snowflake,Microsoft Azure,Cloud hosting and infrastructure provider
+Snowflake,Google Cloud Platform,Cloud hosting and infrastructure provider
+Snowflake,Cloudflare,R2 cloud storage for optional use in connection with Snowflake’s Egress Cost Optimizer feature
+Figma,"Agora, Inc.","Figma uses Agora, Inc. for voice and audio services."
+Figma,"Amazon Web Services, Inc.","Figma uses Amazon Web Services, Inc. to process and store user data for the duration set forth in the user's (or its organization's) agreement with Figma for hosting services and as a service provider for AI-enabled functionality."
+Figma,Anthropic PBC,Figma uses Anthropic as a service provider for AI-enabled functionality.
+Figma,"Cloudflare, Inc.","Figma uses Cloudfare, Inc. for web infrastructure support."
+Figma,"Datadog, Inc.","Figma uses Datadog, Inc. for infrastructure monitoring."
+Figma,"dbt Labs, Inc. (dbt Cloud)",Figma uses dbt Cloud for data analytics.
+Figma,Decagon AI,Figma uses Decagon AI to provide self-serve automation for customer support inquiries.
+Figma,"Functional Software, Inc. (Sentry)","Figma uses Functional Software, Inc. for application error tracking and monitoring."
+Figma,"Gainsight, Inc.","Figma uses Gainsight, Inc. to host and provide one of Figma’s publicly available support forums."
+Figma,Google LLC (Firebase),Figma uses Google Firebase to send push notifications on mobile apps (iOS and Android).
+Figma,Google LLC (Gemini),Figma uses Google Gemini as a service provider for AI-enabled functionality.
+Figma,"Hex, Inc.","Figma uses Hex, Inc. for data analytics."
+Figma,"Jasper AI, Inc.",Service provider for AI-enabled functionality.
+Figma,Microsoft Corporation (Azure),Figma uses Microsoft Corporation (Azure) to process and store user data for the duration set forth in the user’s (or its organization’s) agreement with Figma for hosting services and as a service provider for AI-enabled functionality.
+Figma,"OpenAI, LLC",Service provider for AI-enabled functionality.
+Figma,Premier Talent Partners,Service provider for contractor staffing for Figma’s Product Support team to maintain customer service levels.
+Figma,"SendGrid, Inc.","Figma uses SendGrid, Inc. for cloud-based email notification services."
+Figma,"Sprinklr, Inc.","Figma uses Sprinklr, Inc. for cloud-based customer support services."
+Figma,"Snowflake, Inc.","Figma uses Snowflake, Inc. for cloud-based data warehouse."
+Figma,"Twilio, Inc.","Figma uses Twilio, Inc. for identity management."
+Figma,"Zendesk, Inc.","Figma uses Zendesk, Inc. for cloud-based customer support services."
+Figma,Figma wholly owned subsidiaries,Figma uses its subsidiaries and employees of its subsidiaries to carry out processing as if it were conducted by Figma itself.
+Cyera,Cyera Ltd.,
+Cyera,"Cyera US, Inc.",
+Cyera,Trail Security Inc.,
+Cyera,Trail Security Ltd.,
+Cyera,"Amazon Web Services, Inc.",Hosted Services Provider
+Cyera,Google Cloud Platform,Hosted Services Provider
+Cyera,Microsoft Azure,Hosted Services Provider
+Cyera,Oracle Cloud,Hosted Services Provider
+Cyera,Snowflake,Data analytics warehouse
+Cyera,Frontegg,User authentications
+Cyera,Coralogix,Internal application Log collection. No user information collected
+Cyera,Workato,Integrations hub
+Cyera,Tableau,BI Tools
+Cyera,Clickhouse,Logging services
+Jasper,Amplitude,Analytics & Reporting
+Jasper,dbt Cloud,Analytics & Reporting
+Jasper,Fivetran,Analytics & Reporting
+Jasper,LogRocket,Analytics & Reporting
+Jasper,Mode,Analytics & Reporting
+Jasper,Productboard,Analytics & Reporting
+Jasper,Chargehound,Billing
+Jasper,Churnkey,Billing
+Jasper,Maxio,Billing
+Jasper,Stripe,Billing
+Jasper,Google Workspace,Email
+Jasper,SendGrid,Email
+Jasper,LaunchDarkly,Engineering
+Jasper,FingerprintJS,Fraud Prevention
+Jasper,SerpApi,Geocoding
+Jasper,Cloudflare,Infrastructure
+Jasper,Google Cloud,Infrastructure
+Jasper,Vercel,Infrastructure
+Jasper,Paragon,Integrations (option agentic features)
+Jasper,Anthropic,LLM (option agentic features)
+Jasper,Cohere,LLM (option agentic features)
+Jasper,Google Gemini,LLM (option agentic features)
+Jasper,OpenAI,LLM (option agentic features)
+Jasper,Datadog,Logging
+Jasper,Splunk,Logging
+Jasper,Transcend,Privacy
+Jasper,ADA,Support
+Jasper,Grain,Support
+Jasper,Retool,Support
+Jasper,Slack,Support
+Jasper,Zendesk,Support
+Cloudflare,"Slack Technologies, Inc.",Customer support communications
+Cloudflare,"Zendesk, Inc.",Customer support and account management
+Cloudflare,"Salesforce, Inc.",Customer support and account management
+Cloudflare,Google LLC,"Cloudflare Developer Platform, Cloudflare Zero Trust and AI Gateway"
+Cloudflare,"Oracle America, Inc.",Cloudflare Developer Platform and Cache Reserve
+Cloudflare,Amazon Web Services (AWS),Cloudflare Email Security (formerly Area 1)
+Cloudflare,"CoreWeave, Inc.",Workers AI
+Cloudflare,Nebius BV,Workers AI
+Cloudflare,Anthropic PBC,AI Gateway
+Cloudflare,"OpenAI, Inc.",AI Gateway
+Cloudflare,X.AI Corp.,AI Gateway
+Cloudflare,"Groq, Inc.",AI Gateway
+Cloudflare,Cloudflare Ltd.,
+Cloudflare,Cloudflare Pte. Ltd.,
+Cloudflare,Cloudflare Australia Pty Ltd,
+Cloudflare,Cloudflare Germany GmbH,
+Cloudflare,"Cloudflare Portugal, Unipessoal Lda.",
+Cloudflare,Cloudflare France SAS,
+Cloudflare,Cloudflare Japan K.K.,
+Cloudflare,"Cloudflare (Canada) Information Technology Co., Ltd.",
+Cloudflare,Cloudflare Netherlands B.V.,
+Cloudflare,Cloudflare Middle East FZ-LLC,
+Cloudflare,Cloudflare India Private Limited (for India customers only),
+Cloudflare,"Area 1 Security, LLC",
+Cloudflare,Cloudflare Korea LLC,
+Cloudflare,Cloudflare Mexico S. de R.L de C.V.,
+Cloudflare,Cloudflare Malaysia Sdn. Bhd.,
+Cloudflare,Cloudflare Capability Center (India) Private Limited,
+Cloudflare,Cloudflare Sweden AB,
+Langfuse,"Amazon Web Services, Inc.",Application Hosting
+Langfuse,Clickhouse Inc.,Application Hosting
+Langfuse,Google LLC,Application Hosting
+Langfuse,"Posthog, Inc.",Product metrics
+Langfuse,"Datadog, Inc.",Application logs
+Langfuse,"Cloudflare, Inc.",Web Application Security and file storage
+Langfuse,"Functional Software, Inc. d/b/a Sentry",Application logs
+Langfuse,"Amazon Web Services, Inc.",Application Hosting
+Langfuse,Clickhouse Inc.,Application Hosting
+Langfuse,Google LLC,Application Hosting
+Langfuse,"Posthog, Inc.",Product metrics
+Langfuse,"Datadog, Inc.",Application logs
+Langfuse,"Cloudflare, Inc.",Web Application Security and file storage
+Langfuse,"Functional Software, Inc. d/b/a Sentry",Application logs
+Langfuse,"Amazon Web Services, Inc.",Application Hosting
+Langfuse,Clickhouse Inc.,Application Hosting
+Front,Ably Realtime Ltd.,Real-time events
+Front,"Algolia, Inc.",Searching functionality
+Front,"Amazon Web Services, Inc.",Cloud hosting; Content delivery network; AI-enabled functionality
+Front,"Azure by Microsoft Corporation, Inc.",AI-enabled functionality
+Front,"ClickHouse, Inc.",Reporting and analytics; Conversation transcription
+Front,"Datadog, Inc.",Backend infrastructure services
+Front,"Fastly, Inc.",Caching service provider
+Front,"Google, LLC",Emailing and office applications; AI-enabled functionality
+Front,"Grammarly, Inc.",Grammar Checker and Writing
+Front,"Observe, Inc.",Backend infrastructure services
+Front,Omni Analytics Inc.,Data analytics dashboarding
+Front,"OpenAI, Inc.",AI-enabled functionality
+Front,"Sendgrid by Twilio, Inc.",Email service provider
+Front,"Snowflake, Inc.",Data warehouse services
+Front,"FrontApp, Inc.",Technical and Operational Support for all Front Services.
+Front,FrontApp SARL,Customer Support Operations
+Front,FrontApp Ireland Limited,Customer Support Operations
+Ada,Amazon AWS,Hosting
+Ada,Anthropic,Artificial intelligence models
+Ada,Apify Technologies,Scrape knowledge from selected web pages
+Ada,Chameleon,In-product tours and onboarding
+Ada,ClickHouse,Analytics
+Ada,CloudAMQP,Web Broker Hosting
+Ada,Confluent,Data pipelines and analytics
+Ada,Datadog,Logging
+Ada,Deepgram,Automated Speech Recognition (ASR)
+Ada,Elastic NV,"Answer prediction, database hosting"
+Ada,ElevenLabs,Generated Text-to-speech (TTS)
+Ada,Google Cloud,"Message Translation, Text-to-speech (TTS), Automated Speech Recognition (ASR)"
+Ada,"LangChain (effective May 30, 2025)",Logging
+Ada,Looker (Google Cloud),Business Intelligence and Analytics
+Ada,MongoDB Atlas,Database Hosting
+Ada,Microsoft Azure,Database Hosting; Text-to-Speech for Voice
+Ada,Microsoft Azure’s OpenAI (Microsoft Corporation),Artificial intelligence models
+Ada,OpenAI,Artificial intelligence models
+Ada,PostHog,Analytics
+Ada,Pusher,Realtime Processing
+Ada,Sendgrid,Email Service Provider
+Ada,Sentry,Error Reporting
+Ada,Sunshine Conversations by Zendesk (formerly Smooch Technologies),External Messaging Consolidation
+Ada,Svix,Webhooks functionality and infrastructure
+Ada,"Transcend, Inc.",Data Privacy Compliance
+Ada,Twilio,"Two-Factor Authentication, Telephone calls, call recording, and SMS processing"
+Reclaim,Amazon Web Services,Cloud Hosting
+Reclaim,Google,Cloud Platform
+Reclaim,Microsoft,Cloud Platform
+Reclaim,Vercel,Web development
+Reclaim,Cloudflare,CDN & cloud security
+Reclaim,HashiCorp (Terraform),Infrastructure-as-Code
+Reclaim,GitHub,Source Code Version Control
+Reclaim,Sentry,Error tracking and logging
+Reclaim,Grafana,Performance and infrastructure monitoring
+Reclaim,Retool,Customer Support
+Reclaim,Intercom,Customer support/engagement
+Reclaim,Slack,Internal messaging / customer support
+Reclaim,PartnerStack,Affiliates / Referrals
+Reclaim,Stripe,Billing / Payment Processing
+Reclaim,Osano,Privacy compliance & Cookie consent
+Reclaim,HubSpot,CRM
+Reclaim,ClickHouse / HyperDX,Performance monitoring and logging
+Reclaim,DataDog,Performance monitoring and logging
+Reclaim,OpenAI,"Service provider for AI-enabled features, large language models and embeddings; by opt-in only"
+Otter,"Amazon Web Services, Inc.",Cloud service provider and customer data storage platform
+Otter,Zendesk,Cloud-based customer support services. Personal data may be contained in the customer support tickets.
+Otter,OneSignal,Customer engagement and push notifications.
+Otter,Stripe,Cloud-based Payment Processing
+Otter,Zuora,Subscription Management & Billing
+Otter,Slack,Internal messaging platform for communications.
+Otter,Anthropic,Provider for backend support of AI-enabled functionality. No Customer Data will be used to train or improve Anthropic’s artificial intelligence models. Anthropic does not store Customer Data sent through the API on their platform.
+Otter,OpenAI,Provider for evaluating the effectiveness of our Large Language Models (LLM). The provider is used to provide input on whether product feature(s) may contain harmful information. No Customer Data will be used to train or improve OpenAI’s artificial intelligence models. OpenAI does not store Customer Data sent through the API on their platform.
+Otter,Intercom,Support services. Intercom will only process customer data if it is shared between Customer and Otter.ai in the support tool.
+Otter,Research Transcriptions,Provider for annotating training and evaluation data for our product features.
+Otter,Workato,Provider for building automations and integrations.
+Otter,Google Cloud Platform,Cloud service provider
+Otter,Crusoe,Cloud service provider
+Otter,PartnerHero,The subprocessor only has access to Customer Data in the course of customer-initiated support cases.
+Otter,SendGrid,Email communications
+Zapier,"Amazon Web Services, Inc. (AWS)",Cloud service provider
+Zapier,CloudAMQP,Processing event-based workflows used by Zapier services
+Zapier,Databricks,Data intelligence platform
+Zapier,DataDog,"Application performance monitoring, infrastructure and network monitoring, and error capturing"
+Zapier,Google Cloud,Cloud service provider
+Zapier,Heroku,Deployment and management of Zapier services
+Zapier,Redis,Data storage and caching
+Zapier,Ada,Customer service platform used for technical support chat management
+Zapier,Algolia,"Search functionality for Zapier content, including templates, blog posts, and apps"
+Zapier,FullStory,Analytics to improve Zapier services
+Zapier,Infinity Support Group,Technical support ticket management for customers
+Zapier,Looker,Business intelligence software used to analyze Zapier services usage
+Zapier,Pinecone,Vector database to facilitate vector search features
+Zapier,Sentry,Debugging and support tool used for error reporting
+Zapier,Vitally,"Customer success health scoring, and user engagement/usage tool"
+Zapier,Zendesk,Customer service platform used for technical support ticket management
+Zapier,"Amazon Web Services, Inc. (AWS)",Artificial intelligence provider
+Zapier,Anthropic,Artificial intelligence provider
+Zapier,Google Cloud,Artificial intelligence provider
+Zapier,Microsoft Azure AI,Artificial intelligence provider
+Zapier,OpenAI,Artificial intelligence provider
+Zapier,BrightData,Web search capabilities per customer queries
+Zapier,Firecrawl,Knowledge source gathering capabilities within Chatbots and Agents (Central)
+Zapier,Google Translate,Language translations of customer queries
+Zapier,Liveblocks,Collaboration capabilities within Canvas
+Zapier,Mailgun,Email sending capabilities per customer queries
+Zapier,Stytch,End-user authentication capabilities within Interfaces
+Zapier,Twilio,SMS sending capabilities per customer queries
+Zapier,Uploadcare,File uploading capabilities within Interfaces
+Zapier,WhatsApp,WhatsApp chat sending capabilities per customer queries
+Zapier,Zapier Australia Pty Ltd.,Zapier services and support
+Zapier,Zapier Automation Inc.,Zapier services and support
+Zapier,Zapier Automation Ireland Ltd.,Zapier services and support
+Zapier,Zapier UK Ltd.,Zapier services and support
+GitHub,Amazon Web Services Inc (AWS),"Cloud Hosted Infrastructure, Data Hosting, AI Inference and AI Services"
+GitHub,Anthropic PBC,AI Inference and AI Services
+GitHub,Cloudflare,Content delivery service
+GitHub,Fastly,Content delivery service
+GitHub,Google Cloud Platform (GCP),"Cloud Hosted Infrastructure, AI Inference and AI Services"
+GitHub,Microsoft (Azure),"Cloud Hosted Infrastructure, Data Hosting, AI Inference and AI Services"
+GitHub,Microsoft (Azure),Cognitive Services and customer support ticketing analysis
+GitHub,Microsoft,Technical Services
+GitHub,Moveworks,Customer support ticketing analysis
+GitHub,NexMo Inc (aka Vonage),SMS notification provider for 2 Factor Authentication
+GitHub,Obsidian Security,Security management
+GitHub,OpenAI,AI Inference and AI Services
+GitHub,Pusher,Building and managing real-time infrastructure for web and mobile applications
+GitHub,Twilio     (SendGrid),SMS notification provider for 2 Factor Authentication
+GitHub,VividCortex,"Monitor database performance, efficiency, and uptime"
+GitHub,Zendesk,Customer support ticketing system
+GitHub,GitHub Australia Pty Ltd,GitHub Subsidiary
+GitHub,GitHub BV,GitHub Subsidiary
+GitHub,GitHub Canada ULC,GitHub Subsidiary
+GitHub,GitHub Germany GmbH,GitHub Subsidiary
+GitHub,GitHub India Pty Ltd,GitHub Subsidiary
+GitHub,npm Inc,GitHub Subsidiary
+GitHub,Semmle Inc,GitHub Subsidiary
+Tray,"Amazon Web Services, Inc.",Infrastructure provider
+Tray,"Datadog, Inc.",Internal system and error logs
+Tray,Plan.nr Ltd,"A wholly owned UK subsidiary of Tray.ai, Inc. - Tray has engineering and support staff based in the UK and may therefore need to access data of our customers for support and maintenance purposes"
+Tray,"Twilio, Inc.","Twilio Sendgrid processes emails used by customers in the v3 and below Send Email connector in workflows. Previously named Sendgrid, Inc. This has been superseded in the v4 and above Send Email connector which uses AWS SES"
+Tray,"Amazon Web Services, Inc.",Infrastructure provider
+Tray,"Datadog, Inc.",Internal system and error logs
+Tray,Plan.nr Ltd,"A wholly owned UK subsidiary of Tray.ai, Inc. - Tray has engineering and support staff based in the UK and may therefore need to access data of our customers for support and maintenance purposes"
+Tray,"OpenAI, Inc.",Customers must opt-in to this sub-processor where details of OpenAI’s processing will be described. OpenAI will not be allowed to use customer data for its own training purposes. More info on AI processing here.
+Tray,"Amazon Web Services, Inc.",Infrastructure provider
+Tray,"Datadog, Inc.",Internal system and error logs
+Tray,Plan.nr Ltd,"A wholly owned UK subsidiary of Tray.ai, Inc. - Tray has engineering and support staff based in the UK and may therefore need to access data of our customers for support and maintenance purposes"
+Tray,"Atlassian, Inc. & Atlassian Pty Ltd.",Project management - Jira is used for bug tracking. Data from customer workflows may be processed whilst workflows are debugged with or on behalf of the customer
+Tray,Google LLC,Company communication
+Tray,"Intercom, Inc.",Customer support - Only used if customers submit data via Intercom live chat
+Tray,"Slack Technologies, LLC",Company communication
+Tray,"Zendesk, Inc.",Customer support - Data from customer workflows may be processed whilst workflows are debugged with or on behalf of the customer
+Weaviate,Amazon Web Services,Infrastructure and hosting provider
+Weaviate,Microsoft Azure,Infrastructure and hosting provider
+Weaviate,Google Cloud Platform,Infrastructure and hosting provider
+Weaviate,Grafana Cloud,Observability and system monitoring
+Weaviate,Github,Code repository and CI/CD
+Weaviate,MongoDB,Data storage for billing and provisioning
+Weaviate,Temporal Cloud,Workload orchestration
+Weaviate,Google Workspace,Productivity and communications services
+Weaviate,Twilio,"Email communications, alerts and marketing"
+Weaviate,Hubspot,CRM for marketing
+Weaviate,Pylon,Customer support ticketing system
+Weaviate,Slack,Internal communications tool
+Weaviate,Stripe,Payment services provider
+Weaviate,Sphere,Billing and tax automation
+Weaviate,Modal,GPU-as-a-Service provider
+Weaviate,Open AI,AI feature connectivity
+Sentry,"Amazon Web Services, Inc.410 Terry Avenue NorthSeattle, WA 98109United States",Cloud infrastructure services
+Sentry,"Anthropic, PBC548 Market StSan Francisco, CA 94104United States",AI/ML services
+Sentry,"Cloudflare, Inc.101 Townsend StSan Francisco, CA 94107United States",Cloud infrastructure services
+Sentry,"Google LLC (Google Cloud Platform)1600 Amphitheatre ParkwayMountain View, CA 94043United States",Cloud infrastructure services
+Sentry,"OpenAI, L.L.C.3180 18th St.San Francisco, CA 94110United States",AI/ML services
+Sentry,"Sinch Email (Mailgun)112 E Pecan St, #1135San Antonio, TX 78205United States",Email delivery services
+Sentry,"Twilio Inc. (SendGrid)101 Spear Street, First FloorSan Francisco, CA 94105United States",Email delivery services
+Sentry,Functional Software GmbHRothschildplatz 3Top 3.02.AB 1020 ViennaAustria,Provides parts of the Service and related technical support
+Sentry,"Sentry Software Canada Inc.129 Spadina Ave, 7th FloorToronto, ON M5V 2L3Canada",Provides parts of the Service and related technical support
+Sentry,"Sentry Software Netherlands B.V.Schiphol Boulevard 359WTC Schiphol Airport, D-Tower11th floor1118BJ SchipholNetherlands",Provides parts of the Service and related technical support
+Abnormal,"Amazon Web Services, Inc.",Hosting services for the Abnormal Service
+Abnormal,Microsoft Azure,Hosting Abnormal's Databricks PaaS provider
+Abnormal,Microsoft Azure**,Hosting for the Abnormal Service
+Abnormal,"Databricks, Inc.",Analytics Infrastructure Provider
+Abnormal,Microsoft Azure OpenAI,AI Data Analyst
+Abnormal,SendGrid,Email functionality for the Abuse Mailbox Service
+Abnormal,Microsoft Azure OpenAI,"AI Security Mailbox, AI Phishing Coach, Account Take Over Service Case Summaries"
+Abnormal,"Amazon Web Services, Inc.",Data hosting services for the Account Takeover and Security Posture Management Service
+Abnormal,Atlassian,Troubleshoot Ticketing System and Bug Fixes
+Abnormal,Gainsight,Customer Success and Product Experience
+Abnormal,"Salesforce, Inc.",Customer Relationship Management Tool and Customer Support
+Abnormal,Abnormal AI Australia Pty Ltd.,
+Abnormal,Abnormal AI Canada LTD.,
+Abnormal,Abnormal AI SGP PTY.LTD,To provide customer support to deliver the Service to Customers.
+Abnormal,Abnormal AI UK Ltd.,
+Abnormal,Abnormal AI India Private Ltd.,
+Crescendo,Deepgram Inc.,Automatic speech recognition: call recordings
+Crescendo,Elasticsearch BV,Cloud hosting services
+Crescendo,Google LLC,Google Cloud Platform: cloud hosting services
+Crescendo,Google LLC,"Google PaLM 2: AI service provider, transcripts"
+Crescendo,Google LLC,"Google Workspace: file storage, content collaboration, communications"
+Crescendo,Groq Inc.,"Real time conversations, transcripts, and CX insights"
+Crescendo,"Guru Technologies, Inc.",AI-powered knowledge platform
+Crescendo,Microsoft Corporation Inc.,"Azure: text-to-speech, real time conversations"
+Crescendo,OpenAI LLC,"AI service provider: real time conversations, transcriptions, CX insights"
+Crescendo,Salesforce Inc. (Slack),Internal communication tool
+Crescendo,Redis Inc.,Cache: transcripts
+Crescendo,Twilio Inc.,Telephony: voicebot and inbound telephony
+Crescendo,Twilio Inc. (Sendgrid),"Outbound emails, transcripts"
+Crescendo,Venn US Inc.,Secure BYO-PC technology
+Crescendo,Zendesk Inc.,Cloud-based customer service platform: communications content such as cloud recordings or in-meeting chat transcripts
+Super,"Amazon Web Services, Inc.",Infrastructure
+Super,"Amazon Web Services, Inc.",Infrastructure
+Super,Calendly Inc.,Scheduling
+Super,Chilipiper,Scheduling
+Super,Docusign Inc.,Contract Management
+Super,"Functional Software, Inc. dba Sentry",Infrastructure
+Super,Google Inc.,Infrastructure
+Super,Google Inc.,Infrastructure
+Super,Hotjar Limited Ltd.,Website Analytics
+Super,Hubdoc Inc.,Invoice Document Management
+Super,Hubspot Inc.,Sales
+Super,Intercom Inc.,Customer Messaging
+Super,Linear,Ticketing Software
+Super,Microsoft,Office Productivity Software
+Super,"Microsoft, Azure",Infrastructure
+Super,"Microsoft, Azure",Infrastructure
+Super,"Microsoft, Azure",Infrastructure
+Super,"Microsoft, Azure",Infrastructure
+Super,"Microsoft, Azure",Infrastructure
+Super,"Microsoft, Azure",Infrastructure
+Super,Segment.io Inc.,Data Analysis
+Super,Slack Inc.,Communication
+Super,Stripe Inc.,Payments
+Super,Zapier Inc.,Automation
+Super,"Zendesk, Inc.",Customer Support
+Super,Zoom Inc.,Visual meeting/phone platform
+Writer,Amazon Web Services,Cloud Service Provider
+Writer,Baseten,Infrastructure
+Writer,Elastic Cloud,Infrastructure
+Writer,Google Cloud Platform,Cloud Service Provider
+Writer,Help Scout,Customer Support
+Writer,Segment,Analytics
+Writer,Sendgrid,Email Communications
+Writer,Stripe,Billing
+Writer,Tavily,Web Search
+Writer,"Writer, Inc. affiliates",Services and support
+Spinach,AWS,Host platform and customer databases
+Spinach,Google,Customer communication and meeting calendars
+Spinach,Recall,Customer call processing
+Spinach,MongoDB,Customer databases
+Spinach,LaunchDarkly,Facilitate feature toggle by customer
+Spinach,OpenAI,Process customer data with AI
+Spinach,Sentry,Monitor production data
+Spinach,Customer.io,Facilitate customer email interactions
+Spinach,Intercom,Facilitate customer support function
+Spinach,Mixpanel,Analyze system and customer metrics
+Spinach,Github,Repository for code
+Spinach,Slack,Facilitate internal and external customer interactions
+Spinach,Twilio,Manage 2FA for customer login
+Spinach,Notion,Knowledge repository for internal documentation
+Spinach,Sendgrid,Facilitate customer email interactions
+Spinach,FullStory,Monitor and resolve issues with webapp
+Spinach,Microsoft Azure,Process customer data with AI
+Spinach,Stripe,Payment processor
+Spinach,Deepgram,Transcription Service
+Spinach,AssemblyAI,Transcription Service
+Spinach,Linear,Manage workflow and bug tracking
+Spinach,ElevenLabs,Voice AI services
+MongoDB,"Amazon Web Services, Inc.",Cloud Provider
+MongoDB,Google LLC,Cloud Provider
+MongoDB,Microsoft Corp,Cloud Provider
+MongoDB,"Okta, Inc.",Authentication Services
+MongoDB,"Twilio, Inc.",2FA and SMS Alerts
+MongoDB,"Salesforce.com, Inc.",Support Portal
+MongoDB,Intercom R&D Unlimited Co.,Chat Support
+MongoDB,"Talkdesk, Inc.",Voice Support
+MongoDB,Google Inc.,Email Support
+MongoDB,"Box, Inc.",File Sharing for Remote Consulting Services
+MongoDB,Coveo Software Corp.,Support Search Functionality
+MongoDB,"Fastly, Inc.",Content Delivery Network for Support
+MongoDB,Stripe Inc.,Payment Processor
+Auditoria,"Alphabet, Inc.",Cloud Infrastructure
+Auditoria,"Amazon Web Services, Inc.",Cloud Infrastructure
+Auditoria,"BaseTen Labs, Inc.",Cloud Infrastructure
+Auditoria,Catamorphic Co.,Feature flag management
+Auditoria,"Cloudflare, Inc.",Content Delivery Network and DDoS Prevention
+Auditoria,Elastic NV,Data warehouse services
+Auditoria,"Microsoft, Inc.",Cloud Infrastructure
+Auditoria,"MongoDB, Inc.",Data Warehouse Services
+Auditoria,"Okta, Inc.",Identity and access management services
+Auditoria,"OpenAI, LLC",ML/AI models
+Auditoria,"Plaid, Inc.",Financial services and account verification
+Auditoria,Snowflake,Data warehouse services
+Auditoria,"Stripe, Inc.",Payment processing and financial services
+Auditoria,Twilio,Messaging infrastructure services
+Tango,Airbyte,Data Consolidation Platform
+Tango,Amazon Web Services,Cloud Service Provider
+Tango,Cello,Referral Tracking and Payout
+Tango,Clearbit,Sales Intelligence Software
+Tango,Cloudflare,DNS and DoS Protection
+Tango,Coda,Internal Knowledge Base
+Tango,Datadog,Infrastructure Monitoring
+Tango,dbt Cloud,Business Analytics
+Tango,Frontegg,Enterprise Authentication and Authorization Platform
+Tango,"Functional Software, Inc. (Sentry)",Error Logging
+Tango,Google,Artificial Intelligence
+Tango,Google Analytics,Product Analytics
+Tango,HighTouch,Data Syncing Platform
+Tango,HubSpot,Email Marketing
+Tango,Imgix,Image Platform
+Tango,Integromat,Workflow Automation
+Tango,Intercom,Customer Management and Support
+Tango,Liveblocks,Collaboration Features
+Tango,Microsoft Azure,Artificial Intelligence
+Tango,Mixpanel,Product Analytics Software
+Tango,Onramp,Customer Onboarding Software
+Tango,OpenAI,Artificial Intelligence
+Tango,PostHog,Feature Flags and Customer Troubleshooting
+Tango,Propel,Data Platform
+Tango,Retool,Internal Admin Tools
+Tango,Segment,Data Platform
+Tango,SendGrid,Email Service Provider
+Tango,"Shiny Planes, Inc. (DBA LaunchNotes)",Product Release Updates
+Tango,Slack,Internal Communication
+Tango,Snowflake,Data Warehouse
+Tango,Sprig (formerly UserLeap),Customer Surveys
+Tango,Stripe,Payment Platform
+Tango,Tableau,Business Intelligence
+Tango,UserSnap,Customer Messaging Platform
+Tango,Zapier,Workflow Automation
+Perplexity,Anthropic,"Artificial intelligence research and deployment, including AI models like Claude"
+Perplexity,Google,"Artificial intelligence research and deployment, including AI models like Gemini"
+Perplexity,Amazon Bedrock,Artificial intelligence research and deployment.
+Perplexity,xAI,"Artificial intelligence research and deployment, including AI models like Grok"
+Perplexity,Microsoft Azure,"Cloud computing services including Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS) offerings."
+Perplexity,Loops.so,Email marketing and transactional email services.
+Datarobot,"Amazon Web Services, Inc.",Cloud service provider for multi-tenant SaaS offering (MTS)
+Datarobot,"Amazon Web Services, Inc.",Cloud service provider for single-tenant SaaS offering (STS) (if chosen by Customer)
+Datarobot,Google LLC,Cloud service provider for single-tenant SaaS offering (STS) (if chosen by Customer)
+Datarobot,Microsoft Corporation,Cloud service provider for single-tenant SaaS offering (STS) (if chosen by Customer)
+Datarobot,"Salesforce, Inc.",Customer support
+Datarobot,"SupportLogic, Inc.",Customer support
+Datarobot,"Box, Inc.",Document sharing services
+Datarobot,Google LLC,Document sharing services

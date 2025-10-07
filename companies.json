@@ -1,0 +1,217 @@
+{
+    "companies": [
+      {
+        "name": "Cursor",
+        "url": "https://www.cursor.com/security"
+      },
+      {
+        "name": "Replit",
+        "url": "https://replit.com/subprocessors"
+      },
+      {
+        "name": "Anthropic",
+        "url": "https://www.anthropic.com/subprocessors"
+      },
+      {
+        "name": "CodeGPT",
+        "url": "https://trust.codegpt.co/subprocessors"
+      },
+      {
+        "name": "poolside",
+        "url": "https://trust.poolside.ai/"
+      },
+      {
+        "name": "OpenAI",
+        "url": "https://openai.com/policies/sub-processor-list/"
+      },
+      {
+        "name": "windsurf",
+        "url": "https://windsurf.com/security"
+      },    
+      {
+        "name": "Vercel",
+        "url": "https://security.vercel.com/?itemUid=e3fae2ca-94a9-416b-b577-5c90e382df57&source=title"
+      },
+      {
+        "name": "Datadog",
+        "url": "https://www.datadoghq.com/legal/subprocessors/"
+      },
+      {
+        "name": "Scale",
+        "url": "https://scale.com/legal/subprocessors"
+      },
+      {
+        "name": "Gong",
+        "url": "https://www.gong.io/sub-processors/"
+      },
+      {
+        "name": "Sierra",
+        "url": "https://trust.sierra.ai/subprocessors"
+      },
+      {
+        "name": "Cognition AI",
+        "url": "https://trust.cognition.ai/?itemUid=e3fae2ca-94a9-416b-b577-5c90e382df57&source=click"
+      },
+      {
+        "name": "X",
+        "url": "https://x.ai/legal/subprocessor-list"
+      },
+      {
+        "name": "Neon",
+        "url": "https://neon.com/subprocessors"
+      },
+      {
+        "name": "Cohere",
+        "url": "https://trustcenter.cohere.com/subprocessors"
+      },
+      {
+        "name": "Databricks",
+        "url": "https://www.databricks.com/legal/databricks-subprocessors"
+      },
+      {
+        "name": "Clay",
+        "url": "https://trust.clay.com/subprocessors"
+      },
+      {
+        "name": "Glean",
+        "url": "https://www.glean.com/legal/subprocessors"
+      },
+      {
+        "name": "Pinecone",
+        "url": "https://security.pinecone.io/?itemUid=e3fae2ca-94a9-416b-b577-5c90e382df57"
+      },
+      {
+        "name": "Grafana",
+        "url": "https://grafana.com/legal/list-of-subprocessors/"
+      },
+      {
+        "name": "Cohere",
+        "url": "https://trustcenter.cohere.com/subprocessors"
+      },
+       {
+        "name": "Hebbia",
+        "url": "https://trust.hebbia.ai/subprocessors"
+      },
+      {
+        "name": "Granola",
+        "url": "https://trust.granola.ai/subprocessors"
+      },
+      {
+        "name": "Snowflake",
+        "url": "https://www.snowflake.com/en/legal/privacy/snowflake-sub-processors/"
+      },
+      {
+        "name": "Figma",
+        "url": "https://www.figma.com/sub-processors/"
+      },
+      {
+        "name": "Cyera",
+        "url": "https://www.cyera.com/legal/subprocessors"
+      },
+      {
+        "name": "Jasper",
+        "url": "https://www.jasper.ai/legal/sub-processors"
+      },
+      {
+        "name": "Cloudflare",
+        "url": "https://www.cloudflare.com/en-gb/gdpr/subprocessors/cloudflare-services/"
+      },
+      {
+        "name": "Langfuse",
+        "url": "https://langfuse.com/security/subprocessors"
+      },
+      {
+        "name": "Front",
+        "url": "https://front.com/legal/list-of-subprocessors"
+      },
+      {
+        "name": "Ada",
+        "url": "https://www.ada.cx/legal/subprocessors/"
+      },
+      {
+        "name": "Reclaim",
+        "url": "https://reclaim.ai/subprocessors"
+      },
+      {
+        "name": "Otter",
+        "url": "https://otter.ai/subprocessors"
+      },
+      {
+        "name": "Zapier",
+        "url": "https://zapier.com/legal/subprocessors"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://docs.github.com/en/site-policy/privacy-policies/github-subprocessors"
+      },
+      {
+        "name": "Tray",
+        "url": "https://tray.ai/sub-processors"
+      },
+      {
+        "name": "Weaviate",
+        "url": "https://weaviate.io/subprocessors"
+      },
+      {
+        "name": "Hugging Face",
+        "url": "https://cdn-media.huggingface.co/landing/assets/Subprocessors.pdf"
+      },
+      {
+        "name": "Sentry",
+        "url": "https://sentry.io/legal/subprocessors/"
+      },
+      {
+        "name": "Vercel",
+        "url": "https://security.vercel.com/?itemUid=e3fae2ca-94a9-416b-b577-5c90e382df57&source=title"
+      },
+      {
+        "name": "Abnormal",
+        "url": "https://abnormal.ai/subprocessors"
+      },
+      {
+        "name": "Crescendo",
+        "url": "https://www.crescendo.ai/subprocessors"
+      },
+      {
+        "name": "Super",
+        "url": "https://super.ai/trust/sub-processors"
+      },
+      {
+        "name": "Writer",
+        "url": "https://writer.com/legal/subprocessors/"
+      },
+      {
+        "name": "Read",
+        "url": "https://www.read.ai/subprocessors"
+      },
+      {
+        "name": "Spinach",
+        "url": "https://www.spinach.ai/subprocessors"
+      },
+      {
+        "name": "MongoDB",
+        "url": "https://www.mongodb.com/products/platform/trust/subprocessors"
+      },
+      
+      {
+        "name": "Auditoria",
+        "url": "https://www.auditoria.ai/trust/auditoria-subprocessors/"
+      },
+      {
+        "name": "Tango",
+        "url": "https://www.tango.ai/subprocessors"
+      },
+      {
+        "name": "Assembly AI",
+        "url": "https://app.vanta.com/assemblyai/trust/7n80syl8zln1bn1qm3x8eg/subprocessors"
+      },
+      {
+        "name": "Perplexity",
+        "url": "https://trust.perplexity.ai/"
+      },
+      {
+        "name": "Datarobot",
+        "url": "https://www.datarobot.com/privacy/subprocessors/"
+      } 
+    ]
+  }
